@@ -1,8 +1,5 @@
 * {
   font-family: "Mulish", sans-serif;
-  /* background: url(./assets/bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 p {
@@ -14,16 +11,49 @@ p {
 
 /*                       ID                              */
 #logo {
-  margin: 10px 0 40px 30px;
+  margin: 10px 0 40px 20px;
+  
 }
 
-/*                        CLASSES                               */
-/* .thin{
-  font-family: 'Mulish', sans-serif;
-  font-weight: lighter;
-} */
+
 .verifiers {
   margin: 30px 0 0 0;
+}
+.header{
+  margin: 30px 0 0 0;
+}
+.logo{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background-color: #035fff;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.logo-main {
+  display: flex;
+}
+.time{
+  font-size: 16px;
+}
+.time span{
+  padding: 0 10px;
+  background-color: #17254c;
+  color: #fff;
+  height: 1.9em;
+  width: 1.3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 7px 0 -4px;
+}
+.time span.divider{
+  background: white;
+  color: black
 }
 .form-control {
   min-height: 3rem;
@@ -31,84 +61,12 @@ p {
 .submit-btn {
   margin: 30px 0 30px 0;
 }
-/* section {
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0% 0px 0%;
-  display: flex;
-  flex-direction: column;
-} */
 .card {
   padding: 30px 20px;
 }
-/* .details.date {
-  margin: 20px 0 20px 0px;
+.checkout {
+  padding: 3000px;
 }
-.details.date span {
-  font-size: 32px;
-  padding: 0 0 0 5px;
-  color: red;
-  background: linear-gradient(to right, red, yellow);
-}
-.details.date small {
-  display: block;
-  margin: -10px 0 0 0;
-  font-size: 8px;
-}
-span.receipt {
-  font-size: 40px;
-  color: red;
-}
-.receipt:only-child {
-  transform: scaleY(-1);
-  transform: rotateX(180deg);
-}
-.chip {
-  font-size: 40px;
-  
-}
-.chip:only-child {
-  transform: scaleY(1);
-}
-.wifi {
-  font-size: 40px;
-}
-.wifi:only-child {
-  transform: scaleY(1);
-}
-.card-details.name {
-  font-weight: 500;
-  color: rgb(102, 98, 98);
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-size: 14px;
-  margin: 70px 0px 0px 0px;
-}
-.card-details.number {
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
-.card-details.number span:last-child {
-  margin: 0 0 0 20px;
-  font-size: 17px;
-}
-.card-details.number span:first-child {
-margin: 0 0 0 0;
-}
-.card-details.number span:first-child span {
-  font-size: 30px;
-  margin-right: -20px;
-  width: 10px;
-}
-.card-details.date {
-  color: rgb(66, 65, 65);
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-  padding: 10px 0 0 0;
-} */
-
-
 .details.date {
   margin: 20px 0 20px 0px;
 }
@@ -116,7 +74,6 @@ margin: 0 0 0 0;
   font-size: 32px;
   padding: 0 0 0 5px;
   color: red;
-  /* background: linear-gradient(to right, red, yellow); */
 }
 .details.date small {
   display: block;
@@ -128,7 +85,6 @@ margin: 0 0 0 0;
   display: flex;
   position: relative;
   padding: 0px;
-  min-width: 60%;
   max-width: 60%;
   height: 300px;
   z-index: 9;
@@ -136,7 +92,7 @@ margin: 0 0 0 0;
 .card:last-child {
   padding: 250px 0 0 0;
   background: rgb(230, 236, 245);
-  width: 80%;
+  width: 75%;
   margin: 0;
 }
 .card-details {
@@ -148,7 +104,7 @@ margin: 0 0 0 0;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
   font-size: 14px;
-  margin: 60px 0px -10px 40px;
+  margin: 60px 20% -10px 40px;
 }
 .card-details.number {
   color: black;
@@ -188,7 +144,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: initial;
 }
 .item {
   color: black;
@@ -201,8 +157,19 @@ section {
   font-weight: 400;
 } 
 .border{
+  width: 100%;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  border-bottom: 2px dotted rgb(196, 191, 191);
+  border-bottom: 2px dashed rgb(196, 191, 191);
+}
+.text-end{
+  margin-right: 20px;
+}
+.price {
+    color: black;
+  font-size: 14px;
+  font-weight: 700;
+}
+.receipt {
+  font-size: 40px;
 }

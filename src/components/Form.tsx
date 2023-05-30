@@ -1,18 +1,32 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { usePaymentInputs } from "react-payment-inputs";
+import { BiBook } from "react-icons/bi";
+
 
 function FormPage() {
-  const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } =
+  const { getCardNumberProps, getExpiryDateProps, getCVCProps } =
     usePaymentInputs();
 
   return (
     <>
       <div>
-        <Col>
+        <Row className="header mt-5">
+        <Col className="logo-main">
+          <span className="logo">
+            <BiBook />
+          </span>
           <h6 id="logo">
             AceCoin<span className="thin">Pay</span>
           </h6>
         </Col>
+        <Col className="time text-end px-5">
+          <span>0</span>
+          <span>1</span>
+          <span className="divider">:</span>
+          <span>1</span>
+          <span>9</span>
+        </Col>
+        </Row>
       </div>
       <Form>
         <Form.Group>
@@ -20,10 +34,7 @@ function FormPage() {
             <h6>Card Number</h6>
             <p>Enter the 16-digit card number on the card</p>
           </Form.Label>
-          <Form.Control
-            required
-            {...getCardNumberProps()}
-          />
+          <Form.Control required {...getCardNumberProps()} />
         </Form.Group>
 
         <Form.Group className="verifiers">
@@ -63,15 +74,12 @@ function FormPage() {
               </Form.Label>
             </Col>
             <Col>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-              />
+              <Form.Control type="password" placeholder="Password" />
             </Col>
           </Row>
         </Form.Group>
         <Row className="submit-btn">
-        <Button size="lg">Pay Now</Button>
+          <Button size="lg">Pay Now</Button>
         </Row>
       </Form>
     </>

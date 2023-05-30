@@ -6,25 +6,26 @@ import { BsDot } from "react-icons/bs";
 //IoReceiptOutline
 
 function Data() {
-
   return (
     <section>
       <Card className="card">
         <Row className="card-properties">
-          <Col>
+          <Col className="text-start">
             <span className="chip">
               <FcSimCardChip />
             </span>
           </Col>
-          <Col>
+          <Col className="text-end">
             <span className="wifi">
               <IoWifiOutline />
             </span>
           </Col>
         </Row>
 
-        <Card.Text className="card-details name">Jonathan Michael</Card.Text>
-        <Card.Text className="card-details number">
+        <Card.Text className="card-details name text-center">
+          Jonathan Michael
+        </Card.Text>
+        <Card.Text className="card-details number text-center">
           <span>
             <span>
               <BsDot />
@@ -43,10 +44,10 @@ function Data() {
           <span>3456</span>
         </Card.Text>
         <Row className="details date">
-          <Col>
+          <Col className="text-start">
             <Card.Text className="card-details date">09/22</Card.Text>
           </Col>
-          <Col>
+          <Col className="text-end">
             <span>
               <SiMastercard />
             </span>
@@ -55,14 +56,17 @@ function Data() {
         </Row>
       </Card>
       <Card>
-        <Card.Body>
+        <Card.Body className="checkout">
           <Card.Text className="card-content">
             <Row>
               <Col>
                 <span className="type">Company</span>
               </Col>
-              <Col>
-                <span className="item"><SiApple />Apple</span>
+              <Col className="text-end">
+                <span className="item">
+                  <SiApple />
+                  Apple
+                </span>
               </Col>
             </Row>
           </Card.Text>
@@ -71,7 +75,7 @@ function Data() {
               <Col>
                 <span className="type">Order Number</span>
               </Col>
-              <Col>
+              <Col className="text-end">
                 <span className="item">1266201</span>
               </Col>
             </Row>
@@ -81,7 +85,7 @@ function Data() {
               <Col>
                 <span className="type">Product</span>
               </Col>
-              <Col>
+              <Col className="text-end">
                 <span className="item">MacBook Air</span>
               </Col>
             </Row>
@@ -91,7 +95,7 @@ function Data() {
               <Col>
                 <span className="type">VAT(20%)</span>
               </Col>
-              <Col>
+              <Col className="text-end">
                 <span className="item">$100.00</span>
               </Col>
             </Row>
@@ -101,9 +105,10 @@ function Data() {
             <Row>
               <Col className="type">
                 <p>You have to pay</p>
-                <span className="item">549</span>.99 USD
+                <span className="price">549</span>
+                <span className="item">.99</span> USD
               </Col>
-              <Col>
+              <Col className="text-end">
                 <span className="receipt">
                   <IoReceiptOutline />
                 </span>
