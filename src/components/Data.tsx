@@ -1,12 +1,11 @@
 import { Card, Col, Row } from "react-bootstrap";
 import { IoReceiptOutline, IoWifiOutline } from "react-icons/io5";
 import { FcSimCardChip } from "react-icons/fc";
-import { SiMastercard } from "react-icons/si";
+import { SiMastercard, SiApple } from "react-icons/si";
 import { BsDot } from "react-icons/bs";
 //IoReceiptOutline
 
 function Data() {
-  // const iconStyles = { transform: "scaleY(-1)", };
 
   return (
     <section>
@@ -63,7 +62,7 @@ function Data() {
                 <span className="type">Company</span>
               </Col>
               <Col>
-                <span className="item">Apple</span>
+                <span className="item"><SiApple />Apple</span>
               </Col>
             </Row>
           </Card.Text>
