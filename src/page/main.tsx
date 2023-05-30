@@ -8,7 +8,7 @@ const Main = () => {
     <Col xs={12} md={8}>
         <FormPage />
     </Col>
-    <Col xs={6} md={4}>
+    <Col xs={12} md={4}>
         <Data/>
     </Col>
       </Row>

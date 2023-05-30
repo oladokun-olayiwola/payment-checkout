@@ -1,51 +1,78 @@
-import { Col, Form } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { usePaymentInputs } from "react-payment-inputs";
 
-
 function FormPage() {
-    const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } =
-      usePaymentInputs();
-
+  const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } =
+    usePaymentInputs();
 
   return (
     <>
       <div>
         <Col>
-          <h3>AceCoinPay</h3>
+          <h6 id="logo">
+            AceCoin<span className="thin">Pay</span>
+          </h6>
         </Col>
       </div>
       <Form>
         <Form.Group>
           <Form.Label>
-            <h2>Card Number</h2>
+            <h6>Card Number</h6>
             <p>Enter the 16-digit card number on the card</p>
           </Form.Label>
-          <Form.Control required {...getCardNumberProps()} />
+          <Form.Control
+            required
+            {...getCardNumberProps()}
+          />
+        </Form.Group>
+
+        <Form.Group className="verifiers">
+          <Row>
+            <Col>
+              <Form.Label>
+                <h6>CVC Number</h6>
+                <p>Enter the 3 or 4 digit number on the card</p>
+              </Form.Label>
+            </Col>
+            <Col>
+              <Form.Control required {...getCVCProps()} />
+            </Col>
+          </Row>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>
-            <h2>CVC Number</h2>
-            <p>Enter the 3 or 4 digit number on the card</p>
-          </Form.Label>
-          <Form.Control required {...getCVCProps()} />
+          <Row>
+            <Col>
+              <Form.Label>
+                <h6>Expiry Date</h6>
+                <p>Enter the expiration date of the card</p>
+              </Form.Label>
+            </Col>
+            <Col>
+              <Form.Control required {...getExpiryDateProps()} />
+            </Col>
+          </Row>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>
-            <h2>Expiry Date</h2>
-            <p>Enter the expiration date of the card</p>
-          </Form.Label>
-          <Form.Control required {...getExpiryDateProps()} />
+          <Row>
+            <Col>
+              <Form.Label>
+                <h6>Password</h6>
+                <p>Enter your dynamic password</p>
+              </Form.Label>
+            </Col>
+            <Col>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+              />
+            </Col>
+          </Row>
         </Form.Group>
-
-        <Form.Group>
-          <Form.Label>
-            <h2>Password</h2>
-            <p>Enter your dynamic password</p>
-          </Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
+        <Row className="submit-btn">
+        <Button size="lg">Pay Now</Button>
+        </Row>
       </Form>
     </>
   );
